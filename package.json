@@ -1,8 +1,8 @@
 {
   "name": "scri",
   "version": "1.2.0",
-  "description": "CLI To edit/create npm script at the speed of light",
-  "main": "index.js",
+  "description": "Node.js CLI to create or edit local package.json scripts without having to leave the terminal or writing complex commands.",
+  "main": "./bin/index.js",
   "preferGlobal": true,
   "bin": {
     "scri": "./bin/index.js"
