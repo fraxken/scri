@@ -4,6 +4,7 @@
 const { join } = require("path");
 const { existsSync, readFileSync, writeFileSync } = require("fs");
 const { red, yellow, green, gray } = require("kleur");
+const diff = require("json-diff");
 
 // constants
 const CWD = process.cwd();
@@ -13,7 +14,7 @@ const [scriptName, ...others] = process.argv.slice(2);
 const scriptValue = others.join(" ");
 if (typeof scriptName !== "string") {
     console.log(gray("\n  scri <scriptName> [value]"));
-    console.log(gray("        ^ ~~~~~~~~       "))
+    console.log(gray("        ^ ~~~~~~~~       "));
     console.log(red("> You must provide a script name to create or edit\n"));
     process.exit(0);
 }
@@ -32,5 +33,7 @@ if (!Reflect.has(pkg, "scripts")) {
 }
 pkg.scripts[scriptName] = scriptValue;
 
-writeFileSync(pkgPath, JSON.stringify(pkg, null, 2));
-console.log(gray(`\n > Edited script ${green(scriptName)} with value -> ${yellow(scriptValue)}`));
+const fStr = JSON.stringify(pkg, null, 2);
+writeFileSync(pkgPath, fStr);
+console.log(gray(`\n > Edited script ${green(scriptName)} with value -> ${yellow(scriptValue)}\n`));
+console.log(gray(diff.diffString(JSON.parse(pkgStr), JSON.parse(fStr))));
