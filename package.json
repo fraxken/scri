@@ -1,6 +1,6 @@
 {
   "name": "scri",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "CLI To edit/create npm script at the speed of light",
   "main": "index.js",
   "preferGlobal": true,
@@ -8,8 +8,7 @@
     "scri": "./bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node start.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
