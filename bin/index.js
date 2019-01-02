@@ -35,5 +35,5 @@ pkg.scripts[scriptName] = scriptValue;
 
 const fStr = JSON.stringify(pkg, null, 2);
 writeFileSync(pkgPath, fStr);
-console.log(gray(`\n > Edited script ${green(scriptName)} with value -> ${yellow(scriptValue)}\n`));
-console.log(gray(diff.diffString(JSON.parse(pkgStr), JSON.parse(fStr))));
+console.log(`\n ✔️ Script '${green(scriptName)}' successfully updated with value => ${yellow(scriptValue)}\n`);
+console.log(diff.diffString(JSON.parse(pkgStr), JSON.parse(fStr)));
