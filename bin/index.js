@@ -31,9 +31,22 @@ const pkg = JSON.parse(pkgStr);
 if (!Reflect.has(pkg, "scripts")) {
     pkg.scripts = Object.create(null);
 }
-pkg.scripts[scriptName] = scriptValue;
+
+if (scriptName === "-d") {
+    if (scriptValue.trim() === "") {
+        console.log(gray("\n  scri -d <scriptName>"));
+        console.log(gray("           ^ ~~~~~~~~       "));
+        console.log(red("> Script name must not be empty\n"));
+        process.exit(0);
+    }
+    delete pkg.scripts[scriptValue];
+    console.log(`\n ✔️ Script '${green(scriptValue)}' successfully deleted\n`);
+}
+else {
+    pkg.scripts[scriptName] = scriptValue;
+    console.log(`\n ✔️ Script '${green(scriptName)}' successfully updated with value => ${yellow(scriptValue)}\n`);
+}
 
 const fStr = JSON.stringify(pkg, null, 2);
 writeFileSync(pkgPath, fStr);
-console.log(`\n ✔️ Script '${green(scriptName)}' successfully updated with value => ${yellow(scriptValue)}\n`);
 console.log(diff.diffString(JSON.parse(pkgStr), JSON.parse(fStr)));
