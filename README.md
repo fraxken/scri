@@ -26,5 +26,10 @@ $ cd yourProject
 $ scri start node server.js
 ```
 
+To delete a script, use the `-d` flag:
+```
+$ scri -d start
+```
+
 ## Licence
 MIT
