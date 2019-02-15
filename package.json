@@ -28,7 +28,7 @@
   "devDependencies": {
     "@slimio/eslint-config": "^2.0.3",
     "@types/node": "^10.12.26",
-    "eslint": "^5.11.1"
+    "eslint": "^5.14.0"
   },
   "dependencies": {
     "json-diff": "^0.5.3",
