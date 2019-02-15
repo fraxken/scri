@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "json-diff": "^0.5.3",
-    "kleur": "^3.0.1"
+    "kleur": "^3.0.2"
   }
 }
