@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+"use strict";
 
 // Require Dependencies
 const { join } = require("path");
