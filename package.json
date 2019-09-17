@@ -31,7 +31,7 @@
     "eslint": "^6.4.0"
   },
   "dependencies": {
-    "json-diff": "^0.5.3",
+    "json-diff": "^0.5.4",
     "kleur": "^3.0.2"
   }
 }
