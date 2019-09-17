@@ -20,7 +20,7 @@
     "editor"
   ],
   "files": [
-      "bin"
+    "bin"
   ],
   "author": "GENTILHOMME Thomas <gentilhomme.thomas@gmail.com>",
   "license": "MIT",
@@ -30,7 +30,6 @@
   "homepage": "https://github.com/fraxken/scri#readme",
   "devDependencies": {
     "@slimio/eslint-config": "^3.0.3",
-    "@types/node": "^12.7.5",
     "eslint": "^6.4.0"
   },
   "dependencies": {
