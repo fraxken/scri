@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/fraxken/scri#readme",
   "devDependencies": {
-    "@slimio/eslint-config": "^2.0.3",
+    "@slimio/eslint-config": "^3.0.3",
     "@types/node": "^10.12.26",
     "eslint": "^5.14.0"
   },
